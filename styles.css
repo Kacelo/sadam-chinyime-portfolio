@@ -1,0 +1,40 @@
+#profile-image{
+    border-radius: 50%;
+    width: 20rem;
+    margin: 3%;
+}
+#description{
+    margin: 5rem;
+}
+#skills{
+    background-color: #25395C;
+    color: white;
+}
+#top-part{
+    background-color: #25395C;
+    color: white;
+}
+.skills-heading{
+    color: orange;
+}
+#location{
+    width: 4%;
+}
+
+  
+  /* [2] Transition property for smooth transformation of images */
+  .card img {
+    transition: transform .5s ease;
+  }
+  
+  /* [3] Finally, transforming the image when container gets hovered */
+  .card:hover img {
+    transform: scale(1.1);
+  }
+  .social-image:hover  {
+    transform: scale(1.1);
+  }
+  .social-image{
+    width: 10%;
+    cursor: pointer;
+  }

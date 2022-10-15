@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+    <title>Sadam Chinyime</title>
+  </head>
+  <body>
+    <ul class="nav justify-content-center">
+      <li class="nav-item">
+        <a class="nav-link" href="#">Skills</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">About</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link">Contact</a>
+      </li>
+    </ul>
+    <div class="container">
+      <div class="container" id="top-part">
+        <div class="row">
+          <div class="col-5" id="">
+            <div class="container">
+              <img
+                src="./assets/profile.jpeg"
+                class=""
+                id="profile-image"
+                alt="profile image"
+              />
+            </div>
+          </div>
+          <div class="col-5" id="description">
+            <h1>Sadam Chinyime</h1>
+            <h4>Graphic Designer | Business Consultant</h4>
+            <p class="muted">
+              <img src="./assets/placeholder.png" id="location" /> Windhoek,
+              Namibia
+            </p>
+          </div>
+        </div>
+      </div>
+      <br />
+    </div>
+
+    <div class="container text-center">
+      <h2>My Projects</h2>
+      <br />
+      <div class="card-group">
+        <div class="card">
+          <img src="./assets/img (11).jpeg" class="card-img-top" alt="..." data-bs-toggle="modal" data-bs-target="#exampleModal"/>
+        </div>
+        <div class="card">
+          <img src="./assets/img (10).jpeg" class="card-img-top" alt="..." data-bs-toggle="modal" data-bs-target="#exampleModal"/>
+        </div>
+        <div class="card">
+          <img src="./assets/img (12).jpeg" class="card-img-top" alt="..." data-bs-toggle="modal" data-bs-target="#exampleModal"/>
+        </div>
+      </div>
+      <div class="card-group">
+        <div class="card">
+          <img src="./assets/img (14).jpeg" class="card-img-top" alt="..." data-bs-toggle="modal" data-bs-target="#exampleModal"/>
+        </div>
+        <div class="card">
+          <img src="./assets/img (15).jpeg" class="card-img-top" alt="..." data-bs-toggle="modal" data-bs-target="#exampleModal"/>
+        </div>
+        <div class="card">
+          <img src="./assets/img (7).jpeg" class="card-img-top" alt="..." data-bs-toggle="modal" data-bs-target="#exampleModal"/>
+        </div>
+      </div>
+      <div class="card-group">
+        <div class="card">
+          <img src="./assets/img (2).jpeg" class="card-img-top" alt="..." data-bs-toggle="modal" data-bs-target="#exampleModal"/>
+        </div>
+        <div class="card">
+          <img src="./assets/img (8).jpeg" class="card-img" alt="..." data-bs-toggle="modal" data-bs-target="#exampleModal"/>
+        </div>
+        <div class="card">
+          <img src="./assets/img (13).jpeg" class="card-img" alt="..."  data-bs-toggle="modal" data-bs-target="#exampleModal"/>
+        </div>
+      </div>
+      <!-- Button trigger modal -->
+<!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    Launch demo modal
+  </button> -->
+  
+  <!-- Modal -->
+  <div class="modal fade modal-lg" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <div class="modal-body">
+            <div
+            id="carouselExampleControls"
+            class="carousel slide"
+            data-ride="carousel"
+          >
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img class="d-block" src="./assets/img (10).jpeg" alt="First slide" />
+              </div>
+              <div class="carousel-item">
+                <img
+                  class="d-block"
+                  src="./assets/img (11).jpeg"
+                  alt="Second slide"
+                />
+              </div>
+              <div class="carousel-item">
+                <img class="d-block" src="./assets/img (12).jpeg" alt="Third slide" />
+              </div>
+            </div>
+            <a
+              class="carousel-control-prev"
+              href="#carouselExampleControls"
+              role="button"
+              data-slide="prev"
+            >
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a
+              class="carousel-control-next"
+              href="#carouselExampleControls"
+              role="button"
+              data-slide="next"
+            >
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+      <br />
+    </div>
+   
+    <br />
+    <div class="container text-center" id="skills">
+      <br />
+      <h2>What I Do</h2>
+      <div class="container text-center">
+        <div class="row text-start">
+          <div class="col">
+            <h4 class="skills-heading">Graphic Design</h4>
+            <ul>
+              <li class="list-item">Posters & Flyers</li>
+              <li class="list-item">T-Shirts</li>
+              <li class="list-item">Logo Design</li>
+            </ul>
+          </div>
+          <div class="col">
+            <h4 class="skills-heading">Business Management</h4>
+            <ul>
+              <li class="list-item">Business Plan Drafting</li>
+              <li class="list-item">Wealth and Capital management advice</li>
+              <li class="list-item">Investment Portfolio Drafting</li>
+            </ul>
+          </div>
+          <div class="col">
+            <h4 class="skills-heading">Forex Trading</h4>
+            <ul>
+              <li class="list-item">
+                Account Management with 50/50 profit sharing
+              </li>
+              <li class="list-item">Signal and Analysis</li>
+              <li class="list-item">85% Accurate signals</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <hr />
+    </div>
+    <div class="container text-center">
+      <h2>Get in touch</h2>
+      <div class="row justify-content-sm-center">
+        <div class="col">
+          <a href="https://wa.me/264813186541?text=Hello Sadam">
+            <img src="./assets/whatsapp.png" alt="" class="social-image" />
+          </a>
+        </div>
+        <div class="col">
+          <a href="https://www.linkedin.com/in/sadam-chinyime-343b48245/">
+            <img src="./assets/linkedin.png" alt="" class="social-image" />
+          </a>
+        </div>
+        <div class="col">
+          <a href="https://www.instagram.com/chinyime_sadam/">
+            <img src="./assets/instagram.png" alt="" class="social-image" />
+          </a>
+        </div>
+      </div>
+      <br />
+    </div>
+
+    <script src="./script/index.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
