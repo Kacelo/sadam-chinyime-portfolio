@@ -3,6 +3,18 @@
     width: 20rem;
     margin: 3%;
 }
+
+@media only screen and (max-width: 600px) {
+  #profile-image{
+    border-radius: 50%;
+    width: 10rem;
+    margin: 3%;
+}
+#description{
+  margin: 0 !important;
+  width: 100% !important;
+}
+}
 #description{
     margin: 5rem;
 }
@@ -19,6 +31,13 @@
 }
 #location{
     width: 4%;
+}
+.d-block{
+  width: 50rem;
+  
+}
+.modal-body{
+  padding: 0%;
 }
 
   
