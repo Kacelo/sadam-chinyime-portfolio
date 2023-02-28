@@ -10,8 +10,52 @@
       integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="photoswipe/dist/photoswipe.css" />
     <link rel="stylesheet" href="./styles.css" />
     <title>Sadam Chinyime</title>
+    <script id="AnyMod-script">
+      (function (m, o, d, u, l, a, r, i, z, e) {
+        u[m] = {
+          Project: o,
+          rq: [],
+          Opts: r,
+          ready: function (j) {
+            u[m].rq.push(j);
+          },
+        };
+        function j(s) {
+          return encodeURIComponent(btoa(s));
+        }
+        z = l.getElementById(m + "-" + a);
+        r = u.location;
+        e = [
+          d +
+            "/page/" +
+            o +
+            "/" +
+            j(r.pathname) +
+            "/" +
+            j(r.host) +
+            "?t=" +
+            Date.now(),
+          d,
+        ];
+        e.map(function (w) {
+          i = l.createElement(a);
+          i.defer = 1;
+          i.src = w;
+          z.parentNode.insertBefore(i, z);
+        });
+      })(
+        "AnyMod",
+        "library",
+        "https://cdn.anymod.com/v2",
+        window,
+        document,
+        "script",
+        { toolkit: true, tips: true, priority: 3 }
+      );
+    </script>
   </head>
   <body>
     <ul class="nav justify-content-center">
@@ -141,6 +185,7 @@
           />
         </div>
       </div>
+      <!-- <div id="anymod-nkknmm"></div> -->
 
       <!-- Button trigger modal -->
       <!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
@@ -199,7 +244,7 @@
               <span class="sr-only">Next</span>
             </a>
           </div> -->
-               <!-- <img class="modal-content" id="img01" /> -->
+              <!-- <img class="modal-content" id="img01" /> -->
               <div
                 id="carouselExampleIndicators"
                 class="carousel slide"
@@ -393,6 +438,71 @@
       </div>
       <br />
     </div>
+    <div
+      class="pswp-gallery pswp-gallery--single-column"
+      id="gallery--getting-started"
+    >
+      <a
+        href="https://cdn.photoswipe.com/photoswipe-demo-images/photos/2/img-2500.jpg"
+        data-pswp-width="1669"
+        data-pswp-height="2500"
+        target="_blank"
+      >
+        <img
+          src="https://cdn.photoswipe.com/photoswipe-demo-images/photos/2/img-200.jpg"
+          alt=""
+        />
+      </a>
+      <!-- cropped thumbnail: -->
+      <a
+        href="https://cdn.photoswipe.com/photoswipe-demo-images/photos/7/img-2500.jpg"
+        data-pswp-width="1875"
+        data-pswp-height="2500"
+        data-cropped="true"
+        target="_blank"
+      >
+        <img
+          src="https://cdn.photoswipe.com/photoswipe-demo-images/photos/7/img-200.jpg"
+          alt=""
+        />
+        Cropped
+      </a>
+      <!-- data-pswp-src with custom URL in href -->
+      <a
+        href="https://unsplash.com"
+        data-pswp-src="https://cdn.photoswipe.com/photoswipe-demo-images/photos/3/img-2500.jpg"
+        data-pswp-width="2500"
+        data-pswp-height="1666"
+        target="_blank"
+      >
+        <img
+          src="https://cdn.photoswipe.com/photoswipe-demo-images/photos/3/img-200.jpg"
+          alt=""
+        />
+      </a>
+      <!-- Without thumbnail: -->
+      <a
+        href="http://example.com"
+        data-pswp-src="https://cdn.photoswipe.com/photoswipe-demo-images/photos/5/img-2500.jpg"
+        data-pswp-width="2500"
+        data-pswp-height="1668"
+        target="_blank"
+      >
+        No thumbnail
+      </a>
+      <!-- wrapped with any element: -->
+      <a
+        href="https://cdn.photoswipe.com/photoswipe-demo-images/photos/6/img-2500.jpg"
+        data-pswp-width="2500"
+        data-pswp-height="1667"
+        target="_blank"
+      >
+        <img
+          src="https://cdn.photoswipe.com/photoswipe-demo-images/photos/6/img-200.jpg"
+          alt=""
+        />
+      </a>
+    </div>
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
@@ -414,6 +524,24 @@
       integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
       crossorigin="anonymous"
     ></script>
-    <script src="./script/index.js"></script>
+    <script type="module">
+      import PhotoSwipeLightbox from "photoswipe/dist/photoswipe-lightbox.esm.js";
+      import PhotoSwipe from "/photoswipe/photoswipe.esm.js";
+      const leftArrowSVGString =
+        '<svg aria-hidden="true" class="pswp__icn" viewBox="0 0 100 125" width="100" height="125"><path d="M5,50L50,5l3,3L11,50l42,42l-3,3L5,50z M92,95l3-3L53,50L95,8l-3-3L47,50L92,95z"/></svg>';
+
+      const lightbox = new PhotoSwipeLightbox({
+        arrowPrevSVG: leftArrowSVGString,
+        arrowNextSVG: leftArrowSVGString,
+        mainClass: "pswp--custom-icon-colors",
+
+        gallery: "#gallery--custom-icon-colors",
+
+        children: "a",
+        pswpModule: () => import("photoswipe/dist/photoswipe.esm.js"),
+      });
+      lightbox.init();
+    </script>
+    <script type="module" src="./script/index.js"></script>
   </body>
 </html>
