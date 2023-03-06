@@ -199,7 +199,14 @@ function Landing() {
           </Card>
         </Col>
       </Row>
-      <Row>
+      <Row
+        style={{
+          margin: "0em 0 0 0",
+          backgroundColor: "#",
+          padding: "5em 0",
+          color: "",
+        }}
+      >
         <h1>Lets Take a look at my Portfolio</h1>
         <Mywork />
       </Row>

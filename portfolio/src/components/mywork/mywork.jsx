@@ -1,12 +1,29 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
 import { ImageData } from "../../assets/data";
 import Image from "react-bootstrap/Image";
+import { useRef } from "react";
+
+const MAXWIDTH = "1024px";
 
 const Mywork = () => {
-  console.log(`${ImageData[2].src}`);
-  const img = ["../../assets/profile.jpeg"];
+  const [windowSize, setWindowSize] = useState(getWindowSize());
+  useEffect(() => {
+    function handleWindowResize() {
+      setWindowSize(getWindowSize());
+    }
+    console.log(handleWindowResize);
+    window.addEventListener("resize", handleWindowResize);
+
+    return () => {
+      window.removeEventListener("resize", handleWindowResize);
+    };
+  }, []);
+  function getWindowSize() {
+    const { innerWidth, innerHeight } = window;
+    return { innerWidth, innerHeight };
+  }
   const masonryOprions = {
     fitWidth: false,
     columnWidth: 300,
@@ -19,24 +36,28 @@ const Mywork = () => {
     700: 2,
     500: 1,
   };
-  const Images = ({ src }) => (
-    <Image
-      alt={`cover of`}
-      src={src}
-      rounded
-      style={{ width: "100%", display: "block" }}
-    />
-  );
-  const ImageDisplay = () => <>{ImageData.map(Images)}</>;
   return (
     <Container>
-    <Masonry columnsCount={4} gutter="10px">
-      {/* <ImageDisplay /> */}
-      {ImageData.map((image, i) => (
-        <Image key={i} src={image.src} style={{ width: "100%", display: "block" }} />
-      ))}
-    </Masonry>
-     </Container>
+        <Masonry
+          columnsCount={
+            windowSize.innerWidth < 500
+              ? 1
+              : windowSize.innerWidth <= 1024
+              ? 3
+              : 4
+          }
+          gutter="10px"
+        >
+          {/* <ImageDisplay /> */}
+          {ImageData.map((image, i) => (
+            <Image
+              key={i}
+              src={image.src}
+              style={{ width: "100%", display: "block" }}
+            />
+          ))}
+        </Masonry>
+    </Container>
   );
 };
 
